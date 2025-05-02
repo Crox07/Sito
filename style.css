@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    
+}
+
+.title{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+}
+
+
+.img-res{
+    width: 100%;
+    height: auto;
+    /* border-radius: 10px; */
+    margin-top: 20px;
+
+}
+  
