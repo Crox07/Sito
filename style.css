@@ -61,6 +61,37 @@ body{
   #menu-toggle {
     display: none;
   }
+
+  .grid-servizi {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .servizio {
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .servizio:hover {
+    transform: scale(1.05);
+    background-color: #e0e0e0;
+    border: 1px solid rgb(89, 89, 236);
+  }
+  
+  .dettagli-servizio {
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    padding: 15px;
+    display: none;
+  }
+  
   
   @media (max-width: 768px) {
     .menu {

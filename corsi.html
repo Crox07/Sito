@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corsi</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header id="top" class="navbar">
+        <h1 class="title">TEMPLE BODY</h1>
+        <nav>
+          <input type="checkbox" id="menu-toggle">
+          <label for="menu-toggle" class="menu-icon">&#9776;</label>
+          <ul class="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="corsi.html">Corsi</a></li>
+            <li><a href="#">Orari</a></li>
+            <li><a href="#">Contatti</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <div class="container">
+        <section id="servizi" class="sezione-servizi">
+            <h2>I nostri corsi</h2>
+            <div class="grid-servizi">
+
+                <div class="servizio" onclick="mostradettaglio('SalaPesi')">
+                    <h3>Sala Pesi</h3>
+                    <img src="https://it.freepik.com/immagine-ia-gratis/attrezzatura-da-palestra-3d_132310806.htm#fromView=keyword&page=1&position=6&uuid=a6ee7f70-461e-4b44-9164-f9d9fb647135&query=Sala+Pesi" alt="pesi">
+                </div>
+                <div class="servizio" onclick="mostradettaglio('SalaMacchinari')">
+                    <h3>Sala Macchinari</h3>
+                </div>
+                <div class="servizio" onclick="mostradettaglio('Piscina')">
+                    <h3>Piscina</h3>
+                </div>
+                <div class="servizio" onclick="mostradettaglio('ZonaBenesere')">
+                    <h3>Zona Benessere</h3>
+                </div>
+            </div>
+            
+            <div id="dettagli-servizio" class="dettagli-servizio"></div>
+        </section>
+      </div>
+
+      <script>
+        function mostradettaglio(servizio){
+            const dettagli={
+                SalaPesi: "Una sala attrezzata con pesi liberi e macchinari per allenamenti di forza e resistenza.",
+                SalaMacchinari: "Macchinari cardio e isotonici di ultima generazione per allenamenti mirati e sicuri.",
+                Piscina: "Piscina riscaldata per nuoto libero, corsi di acquagym e attività di riabilitazione.",
+                ZonaBenessere: "Area relax con sauna, bagno turco e zona massaggi per rigenerare corpo e mente."
+            };
+
+        const box = document.getElementById('dettagli-servizio');
+        box.innerHTML = `<p>${dettagli[servizio]}</p>`;
+        box.style.display = 'block';
+
+        }
+      </script>
+</body>
+</html>
