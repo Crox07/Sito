@@ -27,40 +27,59 @@
             <h2>I nostri corsi</h2>
             <div class="grid-servizi">
 
-                <div class="servizio-img-container" onclick="mostradettaglio('SalaPesi')">
-                    <h3 class="servizio-titolo">Sala Pesi</h3>
-                    <img class=servizio-img src="https://palestratortona.it/wp-content/uploads/2024/09/sala-pesi-tortona-foto-9-scaled.jpg" alt="pesi">
-                </div>
+<div class="grid-servizi">
 
-                <div class="servizio" onclick="mostradettaglio('SalaMacchinari')">
-                    <h3>Sala Macchinari</h3>
-                </div>
-                <div class="servizio" onclick="mostradettaglio('Piscina')">
-                    <h3>Piscina</h3>
-                </div>
-                <div class="servizio" onclick="mostradettaglio('ZonaBenesere')">
-                    <h3>Zona Benessere</h3>
-                </div>
+    <div class="servizio-box" onclick="toggleTesto(this)">
+        <img src="https://palestratortona.it/wp-content/uploads/2024/09/sala-pesi-tortona-foto-9-scaled.jpg" alt="Sala Pesi">
+        <div class="servizio-overlay" data-titolo="Sala Pesi" data-dettaglio="Una sala attrezzata con pesi liberi e macchinari per allenamenti di forza e resistenza">
+        <p>Sala Pesi</p>
+        </div>
+    </div>
+
+    <div class="servizio-box" onclick="toggleTesto(this)">
+        <img src="https://via.placeholder.com/400x250?text=Macchinari" alt="Sala Macchinari">
+        <div class="servizio-overlay" data-titolo="Sala Macchinari" data-dettaglio="Macchinari cardio e isotonici di ultima generazione per allenamenti mirati e sicuri">
+        <p>Sala Macchinari</p>
+        </div>
+    </div>
+
+    <div class="servizio-box" onclick="toggleTesto(this)">
+        <img src="https://via.placeholder.com/400x250?text=Piscina" alt="Piscina">
+        <div class="servizio-overlay" data-titolo="Piscina" data-dettaglio="Piscina riscaldata per nuoto libero, corsi di acquagym e attività di riabilitazione">
+        <p>Piscina</p>
+        </div>
+    </div>
+
+    <div class="servizio-box" onclick="toggleTesto(this)">
+        <img src="https://via.placeholder.com/400x250?text=Zona+Benessere" alt="Zona Benessere">
+        <div class="servizio-overlay" data-titolo="Zona Benessere" data-dettaglio="Area relax con sauna, bagno turco e vasca idromassaggio">
+        <p>Zona Benessere</p>
+        </div>
+    </div>
+
+    </div>
+
+
             </div>
+
             
             <div id="dettagli-servizio" class="dettagli-servizio"></div>
         </section>
       </div>
 
-      <script>
-        function mostradettaglio(servizio){
-            const dettagli={
-                SalaPesi: "Una sala attrezzata con pesi liberi e macchinari per allenamenti di forza e resistenza.",
-                SalaMacchinari: "Macchinari cardio e isotonici di ultima generazione per allenamenti mirati e sicuri.",
-                Piscina: "Piscina riscaldata per nuoto libero, corsi di acquagym e attività di riabilitazione.",
-                ZonaBenessere: "Area relax con sauna, bagno turco e zona massaggi per rigenerare corpo e mente."
-            };
+        <script>
+        function toggleTesto(box) {
+        const overlay = box.querySelector('.servizio-overlay');
+        const p = overlay.querySelector('p');
+        const titolo = overlay.getAttribute('data-titolo');
+        const dettaglio = overlay.getAttribute('data-dettaglio');
 
-        const box = document.getElementById('dettagli-servizio');
-        box.innerHTML = `<p>${dettagli[servizio]}</p>`;
-        box.style.display = 'block';
-
+        if (p.innerText === titolo) {
+            p.innerText = dettaglio;
+        } else {
+            p.innerText = titolo;
         }
-      </script>
-</body>
+        }
+        </script>
+
 </html>
