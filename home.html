@@ -1,64 +1,86 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temple Body</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="hero">
-    <video autoplay muted loop playsinline class="hero-video">
-      <source src="images/vid.mp4" type="video/mp4">
-      Il tuo browser non supporta il video HTML5.
-    </video>
-    <div class="hero__content">
-      <ul class="menu-inline">
-        <li><a href="#top">Home</a></li>
-        <li><a href="servizi.html">Servizi</a></li>
-        <li><a href="#">Orari</a></li>
-        <li><a href="#contatti">Contatti</a></li>
-      </ul>
-      <p class="intro-text">Il tuo corpo, il tuo tempio</p>
-      <h1 class="big-text">Benvenuto in Temple Body</h1>
-    </div>
-  </div>
-
-  <section class="about">
-    <p>Benvenuti nella nostra palestra. Dove potrai forgiare il tuo corpo e il tuo spirito diventando la migliore versione di te stesso. Il tuo corpo è il tuo tempio!</p>
-  </section>
-
-  <footer id="contatti">
-    <div class="footer-container">
-      <div class="footer-about">
-        <h3>Chi Siamo</h3>
-        <p>La nostra palestra è il luogo ideale per chi vuole migliorare la propria forma fisica e raggiungere i propri obiettivi con corsi e attrezzature moderne.</p>
-      </div>
-
-      <div class="footer-links">
-        <h3>Link Utili</h3>
-        <ul>
-          <li><a href="#">Chi Siamo</a></li>
-          <li><a href="#">Servizi</a></li>
-          <li><a href="#">Contatti</a></li>
+    <header class="navbar">
+      <h1 class="title">TEMPLE BODY</h1>
+      <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+          <li><a href="#top">Home</a></li>
+          <li><a href="servizi.html">Servizi</a></li>
+          <li><a href="#">Orari</a></li>
+          <li><a href="#social&contacts">Contatti</a></li>
         </ul>
-      </div>
+      </nav>
+    </header>
+  
+    <div class="container" id="top">
+        <div class="hero">
+          <video autoplay muted loop playsinline class="hero-video">
+          <source src="images/vid.mp4" type="video/mp4">
+          Il tuo browser non supporta il video HTML5.
+          </video>
+          <div class="hero-content">
+            <h1 class="big-text">Benvenuto in Temple Body</h1>
+          </div>
+        </div>
 
-      <div class="footer-contact">
-        <h3>Contattaci</h3>
-        <ul>
-          <li>Email: templebody@gymail.it</li>
-          <li>Telefono: +39 123 456 789</li>
-          <li>Indirizzo: Via Al Roccolo 123, Vimercate (MB)</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Temple Body. Tutti i diritti riservati.</p>
-    </div>
-  </footer>
 
-</body>
+    <p class="intro-text">Il tuo corpo, il tuo tempio</p>
+    
+      <p>Benvenuti nella nostra palestra. Dove potrai forgiare il tuo corpo e il tuo spirito diventando la migliore versione di te stesso. Il tuo corpo il tuo tempio!</p>
+    </div>
+    <footer>
+      <div class="footer-container" id="social&contacts">
+        <div class="footer-about">
+          <h3>Chi Siamo</h3>
+          <p>La nostra palestra è il luogo ideale per chi vuole migliorare la propria forma fisica, affrontare sfide nuove e raggiungere i propri obiettivi. Offriamo allenamenti personalizzati, corsi di gruppo e attrezzature all'avanguardia.</p>
+        </div>
+    
+        <div class="footer-links">
+          <h3>Link Utili</h3>
+          <ul>
+            <li><a href="/about">Chi Siamo</a></li>
+            <li><a href="/services">Servizi</a></li>
+            <li><a href="/contact">Contatti</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Termini e Condizioni</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-contact">
+          <h3>Contattaci</h3>
+          <ul>
+            <li><strong>Email:</strong> templebody@gymail.it</li>
+            <li><strong>Telefono:</strong> +39 123 456 789</li>
+            <li><strong>Indirizzo:</strong> Via Al Roccolo 123, Vimercate (MB)</li>
+          </ul>
+        </div>
+    
+        <div class="footer-social">
+          <h3>Seguici</h3>
+          <ul>
+            <li><a href="https://facebook.com/palestra" target="_blank">Facebook</a></li>
+            <li><a href="https://instagram.com/templebody2025" target="_blank">Instagram</a></li>
+            <li><a href="https://youtube.com/@Temple_Body2025" target="_blank">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="footer-bottom">
+        <p>&copy; 2025 Temple Body. Tutti i diritti riservati.</p>
+      </div>
+    </footer>
+  
+  </body>
+  
+
+  
 </html>
