@@ -1,186 +1,120 @@
-body{
-    background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #000;
+  color: white;
 }
 
-.title{
-    text-align: left;
-    font-family: 'Times New Roman';
-    width: 100%;
-}
-
-
-.img-res{
-    width: 100%;
-    height: auto;
-    border-radius: 2px;
-    border: 3px solid white;
-
-}
-  
-.navbar {
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    z-index: 1000; /*sopra agli altri elementi */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  }
-  
-  .navbar .title {
-    margin: 0;
-    font-size: 2em;
-  }
-  
-  nav {
-    position: relative;
-  }
-  
-  .menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .menu li a{
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    padding: 5px 10px;
-  }
-  
-  .menu-icon {
-    display: none;
-    font-size: 2em;
-    cursor: pointer;
-  }
-  
-
-  #menu-toggle {
-    display: none;
-  }
-
-  .grid-servizi {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-top: 10px;
-  }
-  
-  .servizio-box {
+.hero {
   position: relative;
-  border-radius: 12px;
+  min-height: 400px;
+  height: 100vh;
+  max-height: 800px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
 }
 
-  .servizio-box img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-  }
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 
-  .servizio-overlay {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    background: rgba(255, 255, 255, 0.9);
-    color: #111;
-    padding: 12px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: background 0.3s;
-  }
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
 
-  .servizio-overlay:hover {
-    background: rgba(255, 255, 255, 1);
-  }
+.menu-inline {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
 
-  .servizio-overlay p {
-    margin: 0;
-    font-weight: bold;
-    text-align: center;
-  }
+.menu-inline a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  transition: color 0.3s;
+}
 
-  
-  @media (max-width: 768px) {
-    .menu {
-      display: none;/*per nascondere elemento dalla pagina*/
-      flex-direction: column;
-      background-color: black;
-      position: absolute;
-      top: 40px;
-      right: 0;
-      width: 150px;
-      border: 1px solid white;
-    }
-  
-    #menu-toggle:checked + .menu-icon + .menu {
-      display: flex;
-    }
-  
-    .menu-icon {
-      display: block;
-    }
-  }
+.menu-inline a:hover {
+  color: #ff6347;
+}
 
+.intro-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.big-text {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.about {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #111;
+}
 
 footer {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  background-color: #222;
+  padding: 40px 20px;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .footer-container > div {
-  flex: 1;
-  margin: 10px;
+  flex: 1 1 200px;
   min-width: 200px;
 }
 
-h3 {
+footer h3 {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-p, ul {
+footer p, footer ul {
   font-size: 14px;
   line-height: 1.6;
 }
 
-ul {
-  list-style-type: none;
+footer ul {
+  list-style: none;
   padding: 0;
 }
 
-ul li {
+footer ul li {
   margin-bottom: 8px;
 }
 
-a {
+footer a {
   color: #ccc;
   text-decoration: none;
 }
 
-a:hover {
+footer a:hover {
   color: #ff6347;
 }
 
@@ -188,4 +122,20 @@ a:hover {
   text-align: center;
   margin-top: 20px;
   font-size: 12px;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .menu-inline {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .big-text {
+    font-size: 36px;
+  }
+
+  .intro-text {
+    font-size: 16px;
+  }
 }
