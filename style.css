@@ -262,3 +262,55 @@ a:hover {
   margin-top: 20px;
   font-size: 12px;
 }
+
+.about h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.servizio2-box {
+  background-color: #222;
+  padding: 40px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  position: relative;
+}
+
+.servizio2-overlay {
+  position: static;
+  background: none;
+  color: white;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: default;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.grid2-servizi {
+  display: grid;
+  gap: 30px;
+  margin-top: 30px;
+  grid-template-columns: repeat(1, 1fr);
+  margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+  .grid2-servizi {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid2-servizi {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
