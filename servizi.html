@@ -20,66 +20,83 @@
             <li><a href="home.html#social&contacts">Contatti</a></li>
           </ul>
         </nav>
-      </header>
+    </header>
       
-      <div class="container" id="top">
-        <section id="servizi" class="sezione-servizi">
-            <h2>I nostri Servizi</h2>
-            <div class="grid-servizi">
+    <div class="container" id="top">
 
-<div class="grid-servizi">
+    <div class="grid-servizi">
 
-    <div class="servizio-box" onclick="toggleTesto(this)">
-        <img src="images/pesi.jpeg" alt="Sala Pesi">
-        <div class="servizio-overlay" data-titolo="Sala Pesi" data-dettaglio="Una sala attrezzata con pesi liberi e macchinari per allenamenti di forza e resistenza">
-        <p>Sala Pesi</p>
-        </div>
-    </div>
-
-    <div class="servizio-box" onclick="toggleTesto(this)">
-        <img src="images/macchinari.jpg" alt="Sala Macchinari">
-        <div class="servizio-overlay" data-titolo="Sala Macchinari" data-dettaglio="Macchinari cardio e isotonici di ultima generazione per allenamenti mirati e sicuri">
-        <p>Sala Macchinari</p>
-        </div>
-    </div>
-
-    <div class="servizio-box" onclick="toggleTesto(this)">
-        <img src="images/piscina.jpg" alt="Piscina">
-        <div class="servizio-overlay" data-titolo="Piscina" data-dettaglio="Piscina riscaldata per nuoto libero, corsi di acquagym e attività di riabilitazione">
-        <p>Piscina</p>
-        </div>
-    </div>
-
-    <div class="servizio-box" onclick="toggleTesto(this)">
-        <img src="images/benessere.jpg" alt="Zona Benessere">
-        <div class="servizio-overlay" data-titolo="Zona Benessere" data-dettaglio="Area relax con sauna, bagno turco e vasca idromassaggio">
-        <p>Zona Benessere</p>
-        </div>
-    </div>
-
-    </div>
-
-
+        <div class="servizio-box" onclick="toggleTesto(this, 'sala_pesi')">
+            <img src="images/pesi.jpeg" alt="Sala Pesi">
+            <div class="servizio-overlay" 
+                data-titolo="Sala Pesi" 
+                data-dettaglio="Una sala attrezzata con pesi liberi e macchinari per allenamenti di forza e resistenza">
+            <p>Sala Pesi</p>
             </div>
+        </div>
+        <div class="servizio-dettaglio" id="dettaglio-sala_pesi"></div>
 
-            
-            <div id="dettagli-servizio" class="dettagli-servizio"></div>
-        </section>
-      </div>
+        <div class="servizio-box" onclick="toggleTesto(this, 'sala_macchinari')">
+            <img src="images/macchinari.jpg" alt="Sala Macchinari">
+            <div class="servizio-overlay"
+            data-titolo="Sala Macchinari"
+            data-dettaglio="Macchinari cardio e isotonici di ultima generazione per allenamenti mirati e sicuri">
+            <p>Sala Macchinari</p>
+            </div>
+        </div>
+        <div class="servizio-dettaglio" id="dettaglio-sala_macchinari"></div>
+
+        <div class="servizio-box" onclick="toggleTesto(this,'piscina')">
+            <img src="images/piscina.jpg" alt="Piscina">
+            <div class="servizio-overlay"
+            data-titolo="Piscina"
+            data-dettaglio="Piscina riscaldata per nuoto libero, corsi di acquagym e attività di riabilitazione">
+            <p>Piscina</p>
+            </div>
+        </div>
+        <div class="servizio-dettaglio" id="dettaglio-piscina"></div>
+
+        <div class="servizio-box" onclick="toggleTesto(this,'benessere')">
+            <img src="images/benessere.jpg" alt="Zona Benessere">
+            <div class="servizio-overlay"
+            data-titolo="Zona Benessere"
+            data-dettaglio="Area relax con sauna, bagno turco e vasca idromassaggio">
+            <p>Zona Benessere</p>
+            </div>
+        </div>
+        <div class="servizio-dettaglio" id="dettaglio-benessere"></div>
+
 
         <script>
-        function toggleTesto(box) {
-        const overlay = box.querySelector('.servizio-overlay');
-        const p = overlay.querySelector('p');
-        const titolo = overlay.getAttribute('data-titolo');
-        const dettaglio = overlay.getAttribute('data-dettaglio');
+        function toggleTesto(box, id) {
+            const overlay = box.querySelector('.servizio-overlay');
+            const p = overlay.querySelector('p');
+            const titolo = overlay.getAttribute('data-titolo');
+            const dettaglio = overlay.getAttribute('data-dettaglio');
 
-        if (p.innerText === titolo) {
-            p.innerText = dettaglio;
-        } else {
-            p.innerText = titolo;
-        }
+            if (p.innerText === titolo) {
+                p.innerText = dettaglio;
+            } else {
+                p.innerText = titolo;
+            }
+
+            const container = document.getElementById(`dettaglio-${id}`);
+            if (container.innerHTML === "") {
+                container.innerHTML = `
+                <div class="servizio-dettaglio-grid">
+                    <img src="images/${id}_dettaglio.jpeg" alt="${titolo}">
+                    <div>
+                        <h3>${titolo}</h3>
+                        <p>info su ${titolo}. più info su questo servizio sto allungando il testo per inidicare la lunghezza finale indicativa di ogni colonna delle info dopo il click di espansione.</p>
+                    </div>
+                </div>
+                `;
+            } else {
+                container.innerHTML = ""; /* se è aperto lo chiude */
+            }
         }
         </script>
+
+</body>
 
 </html>
