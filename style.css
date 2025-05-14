@@ -209,11 +209,13 @@ body{
   align-items: center;
 }
 
-.servizio-dettaglio-grid img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  max-height: 250px;
+@media (max-width: 768px){
+  .servizio-dettaglio-grid img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 250px;
+  }
 }
 
 .servizio-dettaglio-grid p {
@@ -283,6 +285,10 @@ body{
     display: block;
   }
 
+  .servizio-dettaglio-grid{
+    display: inline-block;
+  }
+  
   .servizio-dettaglio-box {
     grid-template-columns: 1fr;
     text-align: center;
