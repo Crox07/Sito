@@ -57,7 +57,6 @@ body{
 
 .intro-section {
   padding: 40px 20px;
-  max-width: 900px;
   margin: 30px 0;
   background-color: #111;
   border-radius: 12px;
@@ -69,6 +68,7 @@ body{
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .big-text {
@@ -81,6 +81,7 @@ body{
   padding: 40px 20px;
   text-align: center;
   background-color: #111;
+  border-radius: 12px;
 }
 
 
@@ -207,6 +208,10 @@ body{
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
   align-items: center;
+}
+
+.center-text{
+  text-align: center;
 }
 
 @media (max-width: 768px){
